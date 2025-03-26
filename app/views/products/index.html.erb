@@ -1,0 +1,18 @@
+<html>
+    <table>
+        <h1>Sistema</h1>
+
+            <% @products.each do |products| %>
+                <p><%= products.name %></p>
+                <p><%= products.description %></p>
+                <p><%= products.price %></p>
+                <p><%= products.amount %></p>
+
+              <%= link_to "Produto", product_path(products) %>
+
+            <% end %>
+            <div>
+            <p><%= link_to "Novo", "products/new" %></p>
+            </div>
+    </table>
+</html>
